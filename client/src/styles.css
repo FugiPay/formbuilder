@@ -1,0 +1,246 @@
+:root {
+  --ink: #1b2430;
+  --ink-soft: #4b5563;
+  --paper: #f4f5f7;
+  --panel: #ffffff;
+  --line: #d7dbe1;
+  --accent: #1f7a5c;
+  --accent-soft: #e4f1ec;
+  --error: #b3261e;
+  --error-soft: #fbeceb;
+  --mono: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", monospace;
+  --sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.subhead {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 480px;
+}
+
+.status-line {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.status-line.error {
+  color: var(--error);
+}
+
+.form-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.form-picker label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.form-picker select {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.form-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.form-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+
+.form-panel-header h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.version-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.ghost-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ghost-btn:hover {
+  filter: brightness(0.97);
+}
+
+.schema-view {
+  background: var(--ink);
+  color: #d7e4dc;
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.dynamic-form .field {
+  margin-bottom: 20px;
+}
+
+.field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+
+.field-header label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.required-mark {
+  color: var(--accent);
+}
+
+.spec-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.dynamic-form input[type="text"],
+.dynamic-form input[type="email"],
+.dynamic-form input[type="number"],
+.dynamic-form input[type="date"],
+.dynamic-form select,
+.dynamic-form textarea {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.dynamic-form input:focus,
+.dynamic-form select:focus,
+.dynamic-form textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.dynamic-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.field-error {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--error);
+  background: var(--error-soft);
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 8px 0 0;
+}
+
+.submit-btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-panel {
+  background: var(--accent-soft);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.success-title {
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
