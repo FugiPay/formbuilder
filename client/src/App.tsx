@@ -138,7 +138,7 @@ export default function App() {
               <p className="success-title">Submission received.</p>
               <p>
                 Validated against <code>{config.slug}</code> v{config.version}
-                and stored.
+                {' '}and stored.
               </p>
               <button
                 type="button"
