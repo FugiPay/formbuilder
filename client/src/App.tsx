@@ -137,8 +137,8 @@ export default function App() {
             <div className="success-panel" role="status">
               <p className="success-title">Submission received.</p>
               <p>
-                Validated against <code>{config.slug}</code> v{config.version}{' '}
-                and stored.
+                Validated against <code>{config.slug}</code> v{config.version}
+                {' '}and stored.
               </p>
               <button
                 type="button"
